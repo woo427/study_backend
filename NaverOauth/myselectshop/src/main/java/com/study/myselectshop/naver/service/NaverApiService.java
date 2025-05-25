@@ -1,9 +1,14 @@
 package com.study.myselectshop.naver.service;
 
+import com.study.myselectshop.entity.Product;
 import com.study.myselectshop.naver.dto.ItemDto;
+import com.study.myselectshop.naver.dto.ProductRequestDto;
+import com.study.myselectshop.naver.dto.ProductResponseDto;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +26,12 @@ public class NaverApiService {
 
     private final RestTemplate restTemplate;
 
+    @Value("${naver.client.id}")
+    private String clientId;
+
+    @Value("${naver.client.secret}")
+    private String clientSecret;
+
     public NaverApiService(RestTemplateBuilder builder) {
         this.restTemplate = builder.build();
     }
@@ -37,8 +48,8 @@ public class NaverApiService {
 
         RequestEntity<Void> requestEntity = RequestEntity
                 .get(uri)
-                .header("X-Naver-Client-Id", "YOUR_CLIENT_ID")
-                .header("X-Naver-Client-Secret", "YOUR_CLIENT_ID")
+                .header("X-Naver-Client-Id", clientId)
+                .header("X-Naver-Client-Secret", clientSecret)
                 .build();
 
         ResponseEntity<String> responseEntity = restTemplate.exchange(requestEntity, String.class);
@@ -55,4 +66,5 @@ public class NaverApiService {
         }
         return itemDtoList;
     }
+
 }
