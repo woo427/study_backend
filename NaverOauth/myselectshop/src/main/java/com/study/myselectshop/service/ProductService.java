@@ -1,9 +1,9 @@
-package com.study.myselectshop.naver.service;
+package com.study.myselectshop.service;
 
 import com.study.myselectshop.entity.Product;
-import com.study.myselectshop.naver.dto.ProductMypriceRequestDto;
-import com.study.myselectshop.naver.dto.ProductRequestDto;
-import com.study.myselectshop.naver.dto.ProductResponseDto;
+import com.study.myselectshop.dto.ProductMypriceRequestDto;
+import com.study.myselectshop.dto.ProductRequestDto;
+import com.study.myselectshop.dto.ProductResponseDto;
 import com.study.myselectshop.repository.ProductRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

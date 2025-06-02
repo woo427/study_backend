@@ -1,10 +1,6 @@
-package com.study.myselectshop.naver.service;
+package com.study.myselectshop.service;
 
-import com.study.myselectshop.entity.Product;
-import com.study.myselectshop.naver.dto.ItemDto;
-import com.study.myselectshop.naver.dto.ProductRequestDto;
-import com.study.myselectshop.naver.dto.ProductResponseDto;
-import jakarta.validation.Valid;
+import com.study.myselectshop.dto.ItemDto;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
 import org.json.JSONObject;
