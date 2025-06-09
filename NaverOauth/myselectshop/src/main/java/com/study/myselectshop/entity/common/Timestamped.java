@@ -1,4 +1,4 @@
-package com.study.myselectshop.entity;
+package com.study.myselectshop.entity.common;
 
 import jakarta.persistence.*;
 import lombok.Getter;

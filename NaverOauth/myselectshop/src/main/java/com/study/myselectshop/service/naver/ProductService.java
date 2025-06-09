@@ -1,10 +1,10 @@
-package com.study.myselectshop.service;
+package com.study.myselectshop.service.naver;
 
-import com.study.myselectshop.entity.Product;
-import com.study.myselectshop.dto.ProductMypriceRequestDto;
-import com.study.myselectshop.dto.ProductRequestDto;
-import com.study.myselectshop.dto.ProductResponseDto;
-import com.study.myselectshop.repository.ProductRepository;
+import com.study.myselectshop.entity.naver.Product;
+import com.study.myselectshop.dto.naver.ProductMypriceRequestDto;
+import com.study.myselectshop.dto.naver.ProductRequestDto;
+import com.study.myselectshop.dto.naver.ProductResponseDto;
+import com.study.myselectshop.repository.naver.ProductRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

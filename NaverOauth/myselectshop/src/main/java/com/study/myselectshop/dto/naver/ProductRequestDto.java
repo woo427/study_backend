@@ -1,4 +1,4 @@
-package com.study.myselectshop.dto;
+package com.study.myselectshop.dto.naver;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

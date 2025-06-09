@@ -1,7 +1,8 @@
-package com.study.myselectshop.entity;
+package com.study.myselectshop.entity.naver;
 
-import com.study.myselectshop.dto.ProductMypriceRequestDto;
-import com.study.myselectshop.dto.ProductRequestDto;
+import com.study.myselectshop.dto.naver.ProductMypriceRequestDto;
+import com.study.myselectshop.dto.naver.ProductRequestDto;
+import com.study.myselectshop.entity.common.Timestamped;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,12 +1,12 @@
-package com.study.myselectshop.controller;
+package com.study.myselectshop.controller.naver;
 
 import com.study.myselectshop.common.ApiResponse;
-import com.study.myselectshop.dto.ItemDto;
-import com.study.myselectshop.dto.ProductMypriceRequestDto;
-import com.study.myselectshop.dto.ProductRequestDto;
-import com.study.myselectshop.dto.ProductResponseDto;
-import com.study.myselectshop.service.NaverApiService;
-import com.study.myselectshop.service.ProductService;
+import com.study.myselectshop.dto.naver.ItemDto;
+import com.study.myselectshop.dto.naver.ProductMypriceRequestDto;
+import com.study.myselectshop.dto.naver.ProductRequestDto;
+import com.study.myselectshop.dto.naver.ProductResponseDto;
+import com.study.myselectshop.service.naver.NaverApiService;
+import com.study.myselectshop.service.naver.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

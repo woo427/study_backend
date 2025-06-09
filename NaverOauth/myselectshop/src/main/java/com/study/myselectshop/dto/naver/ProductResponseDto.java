@@ -1,6 +1,6 @@
-package com.study.myselectshop.dto;
+package com.study.myselectshop.dto.naver;
 
-import com.study.myselectshop.entity.Product;
+import com.study.myselectshop.entity.naver.Product;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
