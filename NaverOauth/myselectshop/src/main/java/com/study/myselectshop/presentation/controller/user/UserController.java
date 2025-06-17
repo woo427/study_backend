@@ -1,8 +1,13 @@
 package com.study.myselectshop.presentation.controller.user;
 
 import com.study.myselectshop.application.service.user.UserService;
+import com.study.myselectshop.presentation.dto.ApiResponse;
+import com.study.myselectshop.presentation.dto.user.SignupRequestDto;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,20 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     private final UserService userService;
 
-//    회원가입 controller 있어야 함
+//    회원가입 후 토큰 전달해야함.
 
-//    @PostMapping("/user/signup")
-//    public String signup(@Valid SignupRequestDto requestDto, BindingResult bindingResult) {
-//        List<FieldError> fieldErrors = bindingResult.getFieldErrors();
-//        if(fieldErrors.size() > 0) {
-//            for (FieldError fieldError : bindingResult.getFieldErrors()) {
-//                log.error(fieldError.getField() + " 필드 : " + fieldError.getDefaultMessage());
-//            }
-//            return "redirect:/api/user/signup";
-//        }
-//        userService.signup(requestDto);
-//        return "redirect:/api/user/login-page";
-//    }
+    @PostMapping("/signup")
+    public ApiResponse<String> signup(@Valid @RequestBody SignupRequestDto requestDto) {
+        userService.signup(requestDto);
+        return ApiResponse.success("상품 등록 완료", "회원가입이 완료되었습니다.");
+    }
 //
 //    @GetMapping("/user-info")
 //    @ResponseBody
